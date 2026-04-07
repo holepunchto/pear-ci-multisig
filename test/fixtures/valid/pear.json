@@ -1,0 +1,11 @@
+{
+  "multisig": {
+    "publicKeys": [
+      "yryonyebyryonyebyryonyebyryonyebyryonyebyryonyebyryo",
+      "yebyryonyebyryonyebyryonyebyryonyebyryonyebyryonyeby",
+      "ycbogyadycbogyadycbogyadycbogyadycbogyadycbogyadycbo"
+    ],
+    "namespace": "test/app",
+    "quorum": 2
+  }
+}

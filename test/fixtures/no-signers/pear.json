@@ -1,0 +1,6 @@
+{
+  "multisig": {
+    "namespace": "test/app",
+    "quorum": 2
+  }
+}
