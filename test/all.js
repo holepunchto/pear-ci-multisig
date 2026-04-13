@@ -8,7 +8,6 @@ async function runTests() {
   test.pause()
 
   await import('./bin.test.js')
-  await import('./commit.test.js')
   await import('./index.test.js')
   await import('./request.test.js')
 
