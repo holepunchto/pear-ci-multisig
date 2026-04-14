@@ -2,7 +2,7 @@
 'use strict'
 const fs = require('fs')
 const { ERR_INVALID_CONFIG, ERR_INVALID_INPUT } = require('pear-errors')
-const { command, description, flag, arg, bail } = require('paparam')
+const { command, description, flag, arg, bail, argv } = require('paparam')
 const loadConfig = require('./lib/config')
 const ci = require('.')
 const program = global.Bare ?? global.process
@@ -62,9 +62,8 @@ const request = command(
   bail(onbail)
 )
 
-const cmd = command('pear-multisig', link, request, bail(onbail))
-
-cmd.parse(program.argv.slice(2))
+const cmd = command('pear-ci-multisig', link, request, bail(onbail))
+cmd.parse(argv().length === 0 ? ['--help'] : argv())
 
 function onbail(b) {
   if (
